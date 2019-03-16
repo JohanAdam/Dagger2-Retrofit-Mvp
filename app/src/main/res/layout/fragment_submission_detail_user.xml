@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main_content"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true"
+  tools:context=".submissiondetail.user.SubmissionDetailUFragment">
+
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+      android:id="@+id/appbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:background="@color/cornflower"
+      android:elevation="4dp"
+      android:fitsSystemWindows="true"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      tools:targetApi="lollipop">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+          android:id="@+id/tv_surah"
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="32dp"
+          android:layout_centerHorizontal="true"
+          tools:text="Surah name"
+          android:textSize="36sp"
+          android:fontFamily="sans-serif"/>
+
+        <TextView
+          android:id="@+id/tv_verse"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_surah"
+          android:layout_centerHorizontal="true"
+          android:fontFamily="sans-serif-light"
+          android:gravity="center_horizontal"
+          android:textSize="18sp"
+          tools:text="Verse 1 - 7"
+          android:textStyle="normal"/>
+
+        <TextView
+          android:id="@+id/createdAt_tv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="8dp"
+          android:layout_below="@+id/tv_verse"
+          android:layout_centerHorizontal="true"
+          android:gravity="center_horizontal"
+          android:fontFamily="sans-serif-condensed"
+          android:textSize="12sp"
+          android:textStyle="italic"
+          tools:text="11 Feb 2018"/>
+
+      </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+      android:id="@+id/progressBar"
+      android:layout_width="25dp"
+      android:layout_height="25dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/appbar"
+      app:srcCompat="@drawable/anim_loading"/>
+
+    <TextView
+      android:id="@+id/tvTitleReviewer"
+      style="@style/ButtonText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/appbar"
+      android:text="@string/title_reviewer"
+      android:textAllCaps="true"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/iv_profile"
+      android:layout_width="54dp"
+      android:layout_height="54dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvTitleReviewer"
+      android:src="@drawable/ic_account_circle_black_24dp"/>
+
+    <TextView
+      android:id="@+id/tv_ustaz_name"
+      android:textStyle="normal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:fontFamily="sans-serif-condensed"
+      android:gravity="center_horizontal"
+      android:textColor="#ffffff"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/iv_profile"
+      tools:text="Ustaz Shafuan"/>
+
+    <TextView
+      android:id="@+id/result_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_alignParentEnd="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/appbar"
+      tools:text="Result"
+      android:textStyle="bold"
+      android:visibility="gone"/>
+
+    <RelativeLayout
+      android:id="@+id/middle_layout"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btn_review_cs"
+      app:layout_constraintVertical_bias="0.0">
+
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+      <TextView
+        android:id="@+id/no_comment_layout"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/rc"
+        android:layout_alignStart="@+id/rc"
+        android:layout_alignTop="@+id/rc"
+        android:visibility="visible"
+        android:padding="10dp"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/msg_no_comment"
+        android:textColor="@color/font_a6"
+        android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <android.support.constraint.Group
+      android:id="@+id/group_error"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      app:constraint_referenced_ids="tv_error_message,btn_error"/>
+
+    <TextView
+      android:id="@+id/tv_error_message"
+      android:textStyle="bold"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginEnd="10dp"
+      android:text="@string/error_default"
+      android:textColor="@color/font_a6"
+      android:visibility="visible"
+      android:textSize="18sp"
+      android:gravity="center"
+      app:layout_constraintBottom_toTopOf="@+id/btn_error"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/middle_layout"/>
+
+    <Button
+      android:id="@+id/btn_error"
+      android:layout_width="120dp"
+      android:layout_height="54.4dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_below="@id/middle_layout"
+      android:layout_centerHorizontal="true"
+      app:layout_constraintBottom_toBottomOf="@+id/middle_layout"
+      app:layout_constraintEnd_toEndOf="@+id/middle_layout"
+      app:layout_constraintStart_toStartOf="@+id/middle_layout"
+      app:layout_constraintTop_toTopOf="@+id/middle_layout"
+      android:background="@drawable/button_background_pink"
+      android:elevation="5dp"
+      android:text="@string/action_refresh"
+      android:visibility="visible"
+      tools:targetApi="lollipop"/>
+
+    <Button
+      android:id="@+id/btn_review_cs"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_ustaz_name"
+      android:paddingLeft="30dp"
+      android:paddingRight="30dp"
+      android:background="@drawable/button_background_pink"
+      android:elevation="5dp"
+      android:text="@string/action_give_rating_cs"
+      tools:targetApi="lollipop"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+  <ImageButton
+    android:id="@+id/fab_Play"
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    android:layout_margin="@dimen/fab_margin"
+    app:layout_anchor="@id/appbar"
+    app:layout_anchorGravity="bottom|left|end"
+    android:background="@drawable/button_background_pink"
+    android:elevation="5dp"
+    android:src="@drawable/ic_play_arrow_white_24dp"
+    tools:targetApi="lollipop"
+    android:contentDescription="@string/icon_play"/>
+
+</android.support.design.widget.CoordinatorLayout>

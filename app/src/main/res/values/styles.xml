@@ -1,0 +1,123 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimary</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:textColorPrimary">@color/md_blue_grey_100</item>
+    <item name="android:textColorSecondary">@color/material_drawer_hint_text</item>
+    <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+    <item name="android:dialogTheme">@style/AppDialog</item>
+    <item name="android:alertDialogTheme">@style/AppDialog</item>
+    <item name="android:textColorHint">@color/cornflower</item>
+    <item name="android:windowBackground">@color/colorPrimaryDark</item>
+  </style>
+
+  <!--Style for toolbar-->
+
+  <!--Style for splash screen-->
+  <style name="SplashTheme" parent="AppTheme">
+    <item name="android:windowBackground">@drawable/background_splashes</item>
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/slate</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <!--Style for dialog-->
+  <style name="AppDialog" parent="Theme.AppCompat.Light.Dialog">
+    <item name="android:textColor">@color/greyish_brown</item>
+    <item name="android:textColorPrimary">@color/md_blue_grey_800</item>
+    <item name="android:textColorSecondary">@color/slate</item>
+    <item name="colorAccent">@color/cornflower</item>
+    <item name="android:windowBackground">@color/transparent</item>
+    <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+  </style>
+
+  <!--Toggle Button-->
+  <style name="ToggleButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+    <item name="android:foreground">?attr/selectableItemBackground</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:background">@drawable/toggle_background</item>
+    <item name="android:button">@null</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:paddingLeft">20dp</item>
+    <item name="android:paddingTop">10dp</item>
+    <item name="android:paddingBottom">10dp</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:paddingRight">20dp</item>
+  </style>
+
+  <style name="DialogAnimation">
+    <item name="android:windowEnterAnimation">@anim/bounce_in</item>
+    <item name="android:windowExitAnimation">@anim/bounce_out</item>
+  </style>
+
+  <style name="MaterialDrawer.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+    <item name="spinBars">false</item>
+    <item name="android:textColorSecondary">@android:color/white</item>
+    <item name="color">@android:color/white</item>
+    <item name="android:background">@color/greyish_brown</item>
+  </style>
+
+  <!--Style for Text-->
+
+  <style name="DrawerItem">
+    <item name="android:textSize">24sp</item>
+    <item name="android:fontFamily">sans-serif-light</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:textColor">#ffffff</item>
+  </style>
+
+  <style name="ListSingleItemTitle">
+    <item name="android:textSize">20sp</item>
+    <item name="android:fontFamily">sans-serif</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">#ffffff</item>
+  </style>
+
+  <style name="ButtonText">
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:fontFamily">sans-serif</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:textColor">#ffffff</item>
+  </style>
+
+  <style name="ButtonSubtext">
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:fontFamily">sans-serif-light</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:textColor">#a6a6a6</item>
+  </style>
+
+  <style name="ErrorLayoutMessage">
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:fontFamily">sans-serif</item>
+    <item name="android:textColor">#ffffff</item>
+  </style>
+
+  <!--InputTextLayout Style-->
+  <style name="TextAppearence.App.TextInputLayout" parent="AppTheme">
+    <item name="android:textColor">@color/colorAccent</item>
+    <item name="android:textColorHint">@color/font_9b</item>
+    <item name="colorControlNormal">@color/cornflower</item>
+    <item name="colorControlActivated">@color/denim_blue</item>
+    <item name="colorControlHighlight">@color/md_blue_600</item>
+
+  </style>
+
+  <style name="EditTextStyle">
+    <item name="android:textColor">@color/white</item>
+    <item name="android:textColorHint">@color/white</item>
+    <item name="colorControlNormal">@color/material_drawer_divider</item>
+    <item name="colorControlActivated">@color/white</item>
+    <item name="colorControlHighlight">@color/white</item>
+  </style>
+
+</resources>

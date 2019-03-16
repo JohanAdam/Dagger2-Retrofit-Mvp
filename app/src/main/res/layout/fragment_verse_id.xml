@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:fancy="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="io.reciteapp.recite.verseid.VerseIdFragment">
+
+  <TextView
+    android:id="@+id/tv_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toTopOf="@+id/demo_mpc"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:textStyle="bold"
+    android:fontFamily="sans-serif"
+    android:gravity="center_horizontal"
+    android:text="@string/msg_tap_identify_verse"
+    android:textColor="@color/pinkish_grey"
+    android:textSize="18sp"/>
+
+  <TextView
+    android:id="@+id/hint_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toTopOf="@+id/guideline7"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/demo_mpc"
+    android:fontFamily="sans-serif-light"
+    android:gravity="center_horizontal"
+    android:text="@string/msg_hint_better_accuracy_recitetime"
+    android:textColor="@color/pinkish_grey"
+    android:textSize="12sp"
+    android:textStyle="normal"/>
+
+  <ImageButton
+    android:id="@+id/btn_mic"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    fancy:layout_constraintBottom_toBottomOf="@+id/demo_mpc"
+    fancy:layout_constraintEnd_toEndOf="@+id/demo_mpc"
+    fancy:layout_constraintStart_toStartOf="@+id/demo_mpc"
+    fancy:layout_constraintTop_toTopOf="@+id/demo_mpc"
+    android:background="@drawable/button_background_round"
+    android:src="@drawable/ic_waves"/>
+
+  <com.liulishuo.magicprogresswidget.MagicProgressCircle
+    android:id="@+id/demo_mpc"
+    android:layout_width="130dp"
+    android:layout_height="130dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toTopOf="@+id/hint_text"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+    app:mpc_default_color="@color/mpc_default_color"
+    app:mpc_end_color="@color/cornflower"
+    app:mpc_percent="1.0"
+    app:mpc_start_color="@color/cornflower"
+    app:mpc_stroke_width="3dp"/>
+
+  <TextView
+    android:id="@+id/status_text"
+    android:textStyle="normal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:fontFamily="sans-serif"
+    android:gravity="center_horizontal"
+    android:textColor="@color/pinkish_grey"
+    android:textSize="24sp"
+    app:layout_constraintBottom_toBottomOf="@+id/hint_text"
+    app:layout_constraintEnd_toEndOf="@+id/hint_text"
+    app:layout_constraintStart_toStartOf="@+id/hint_text"
+    app:layout_constraintTop_toTopOf="@+id/hint_text"
+    tools:text="Al Kafirun
+Verse : 1,2,3"/>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/layout_info"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="48dp"
+    android:layout_marginEnd="48dp"
+    android:paddingBottom="12dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:background="@drawable/dialog_bg"
+    android:clickable="false"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline7">
+
+    <ImageView
+      android:id="@+id/tv_image_disclaimer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:src="@drawable/ic_warning"/>
+
+    <TextView
+      android:id="@+id/textView5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="12dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_image_disclaimer"
+      android:textStyle="normal"
+      android:fontFamily="sans-serif-condensed-light"
+      android:lineSpacingExtra="7sp"
+      android:text="@string/msg_verse_id_disclaimer"
+      android:textColor="@color/white"
+      android:textSize="12sp"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+  <android.support.constraint.Guideline
+    android:id="@+id/guideline7"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.6878307"/>
+
+</android.support.constraint.ConstraintLayout>

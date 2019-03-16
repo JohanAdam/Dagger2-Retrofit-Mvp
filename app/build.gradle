@@ -1,0 +1,172 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "io.reciteapp.recite"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "int", "LIMIT", "100"
+//        buildConfigField "String", "BASEURL", "\"https://reciteazureapp.azurewebsites.net\""
+//        buildConfigField "String", "BASEURL", "\"https://reciteweb.azurewebsites.net\""
+        buildConfigField "String", "BASEURLIN", "\"http://192.168.0.162:5001\""
+        buildConfigField "String", "BASEURLMY", "\"https://rec.azurewebsites.net\""
+//        buildConfigField "String", "BASEURLMY", "\"https://recite.southeastasia.cloudapp.azure.com:8944\""
+        buildConfigField "int", "CACHETIME", "432000" // 5days
+        buildConfigField "String", "WEB_CLIENT_ID", "\"970479592067-a9j92v5oufebe51bj35cukrl09kkaek4.apps.googleusercontent.com\""
+
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = ['redirectUriScheme': 'reciteazureapp://easyauth.callback']
+        }
+        debug {
+            // ...
+            manifestPlaceholders = ['redirectUriScheme': 'reciteazureapp://easyauth.callback']
+        }
+    }
+
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+//        incremental true
+        javaMaxHeapSize "4g"
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //Android Support
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    implementation "com.android.support:design:$supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$supportLibraryVersion"
+    implementation "com.android.support:support-v4:$supportLibraryVersion"
+    implementation "com.android.support:support-compat:$supportLibraryVersion"
+    implementation "com.android.support:customtabs:$supportLibraryVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    implementation "com.android.support:support-v4:$supportLibraryVersion"
+    implementation "com.android.support:multidex:$multiDexVersion"
+
+    //Android Arch Component
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
+    androidTestImplementation "android.arch.persistence.room:testing:$roomVersion"
+
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+    //Butterknife
+    implementation "com.jakewharton:butterknife:$butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+
+    implementation("com.microsoft.azure.android:azure-storage-android:$azureStorageVersion") {
+        transitive = true
+    }
+
+    //Timber
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    //Crashlytics
+    implementation "com.crashlytics.sdk.android:crashlytics:$crashlyticsVersion"
+    //Core
+    implementation "com.google.firebase:firebase-core:$firebaseCoreVersion"
+    //Authentication
+    implementation "com.google.firebase:firebase-auth:$firebaseAuthVersion"
+
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.android.gms:play-services-gcm:16.0.0'
+    implementation 'com.facebook.android:facebook-login:4.33.0'
+    //Notification
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+
+    //OkHttp
+    implementation "com.squareup.okhttp:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okHttp3Version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion3LoggingInterceptorVersion"
+
+    //Google Gson
+    implementation "com.google.code.gson:gson:$googleGsonVersion"
+
+    //Guava
+    implementation "com.google.guava:guava:$guavaVersion"
+
+    //Okio
+    implementation "com.squareup.okio:okio:$okioVersion"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofitConverterScalarsVersion"
+
+    //RxJava
+    implementation "io.reactivex:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex:rxjava:$rxJavaVersion"
+
+    compileOnly "org.glassfish:javax.annotation:$glassfishAnnotation"
+
+    //Dagger
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    // if you use the support libraries
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    //Material Drawer
+    implementation("com.mikepenz:materialdrawer:$materialDrawerVerison") {
+        transitive = true
+    }
+
+    //Magic Progress Widget
+    implementation "com.liulishuo.magicprogresswidget:library:$magicProgressWidget"
+
+    //RecyclerView collapse
+    implementation "com.bignerdranch.android:expandablerecyclerview:$expandableRecyclerviewVersion"
+
+    //Player Audio
+    implementation "com.google.android.exoplayer:exoplayer:$exoplayerVersion"
+
+    //OmRecorder
+    implementation "com.kailashdabhi:om-recorder:$omRecorderVersion"
+
+    //ImageView Circle
+    implementation "de.hdodenhof:circleimageview:$imageCircleVersion"
+
+    //Lottie Animation View
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    //Tab layout
+    implementation("com.ogaclejapan.smarttablayout:library:$smartTabLayoutVersion") {
+        transitive = true
+    }
+
+    //LeakCanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+    // Optional, if you use support library fragments:
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1'
+
+    //Mockito
+    testImplementation 'org.mockito:mockito-all:1.10.19'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+apply plugin: 'com.google.gms.google-services'

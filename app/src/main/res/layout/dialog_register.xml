@@ -1,0 +1,235 @@
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:fancy="http://schemas.android.com/apk/res-auto"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="@drawable/dialog_bg"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/signup_logo"
+    android:textStyle="bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:gravity="center"
+    android:text="@string/title_register"
+    android:textSize="18sp"/>
+
+  <android.support.v4.widget.NestedScrollView
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:layout_marginTop="23dp"
+    android:layout_below="@+id/signup_logo"
+    android:fastScrollAlwaysVisible="true"
+    android:fastScrollEnabled="true"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal">
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/il_firstName"
+        android:layout_width="257.1dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/msg_firstName"
+        android:theme="@style/TextAppearence.App.TextInputLayout"
+        fancy:hintAnimationEnabled="true"
+        fancy:hintEnabled="true">
+
+        <EditText
+          android:id="@+id/et_firstname"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="15dp"
+          android:inputType="textPersonName"
+          android:labelFor="@+id/et_firstname"
+          style="@style/EditTextStyle"
+          android:maxLength="20"
+          android:maxLines="1"/>
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/il_lastName"
+        android:layout_width="257.1dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/il_firstName"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/msg_lastName"
+        android:theme="@style/TextAppearence.App.TextInputLayout"
+        fancy:hintAnimationEnabled="true"
+        fancy:hintEnabled="true">
+
+        <EditText
+          android:id="@+id/et_lastname"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="15dp"
+          android:inputType="textPersonName"
+          android:labelFor="@id/et_lastname"
+          style="@style/EditTextStyle"
+          android:maxLength="20"
+          android:maxLines="1"/>
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/il_email"
+        android:layout_width="257.1dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/il_lastName"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/msg_email"
+        android:theme="@style/TextAppearence.App.TextInputLayout"
+        fancy:hintAnimationEnabled="true"
+        fancy:hintEnabled="true">
+
+        <EditText
+          android:id="@+id/et_email"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="15dp"
+          android:inputType="textEmailAddress"
+          android:labelFor="@id/et_email"
+          style="@style/EditTextStyle"
+          android:maxLength="50"
+          android:maxLines="1"/>
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/il_contactNumber"
+        android:layout_width="257.1dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/il_email"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/msg_contact_number"
+        android:theme="@style/TextAppearence.App.TextInputLayout"
+        fancy:hintAnimationEnabled="true"
+        fancy:hintEnabled="true">
+
+        <EditText
+          android:id="@+id/et_contactNumber"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="15dp"
+          android:inputType="text|number"
+          android:labelFor="@id/et_contactNumber"
+          style="@style/EditTextStyle"
+          android:maxLength="20"
+          android:maxLines="1"/>
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/il_nationality"
+        android:layout_width="257.1dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/il_contactNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/msg_nationality"
+        android:theme="@style/TextAppearence.App.TextInputLayout"
+        fancy:hintAnimationEnabled="true"
+        fancy:hintEnabled="true">
+
+        <EditText
+          android:id="@+id/et_nationality"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="15dp"
+          android:inputType="textCapCharacters"
+          android:labelFor="@id/et_nationality"
+          style="@style/EditTextStyle"
+          android:maxLength="20"
+          android:maxLines="1"/>
+
+      </android.support.design.widget.TextInputLayout>
+
+      <Button
+        android:id="@+id/btn_male"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/il_address"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:background="@drawable/button_background_pink"
+        android:text="@string/title_male"/>
+
+      <Button
+        android:id="@+id/btn_female"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignEnd="@+id/il_email"
+        android:layout_alignTop="@id/btn_male"
+        android:layout_below="@+id/il_email"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/button_background_pink"
+        android:text="@string/title_female"/>
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/il_address"
+        android:layout_width="257.1dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/il_nationality"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/msg_address"
+        android:theme="@style/TextAppearence.App.TextInputLayout"
+        fancy:hintAnimationEnabled="true"
+        fancy:hintEnabled="true">
+
+        <EditText
+          android:id="@+id/et_address"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          style="@style/EditTextStyle"
+          android:paddingBottom="15dp"
+          android:inputType="textMultiLine"
+          android:labelFor="@id/et_address"
+          android:maxLength="2000"/>
+
+      </android.support.design.widget.TextInputLayout>
+
+
+    </RelativeLayout>
+
+  </android.support.v4.widget.NestedScrollView>
+
+  <Button
+    android:id="@+id/btn_register"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="?android:attr/borderlessButtonStyle"
+    android:layout_marginTop="25dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_below="@+id/main_layout"
+    android:layout_alignParentEnd="true"
+    android:text="@string/title_register"/>
+
+</RelativeLayout>

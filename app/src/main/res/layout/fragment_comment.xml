@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/slate">
+
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+      android:id="@+id/tv_duration"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:gravity="center_horizontal"
+      android:fontFamily="sans-serif"
+      tools:text="0:03"
+      android:textColor="@color/white"
+      android:textSize="36sp"/>
+
+    <TextView
+      android:id="@+id/tv_comment"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="40dp"
+      android:layout_marginEnd="40dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_duration"
+      android:background="@color/greyish_brown"
+      android:padding="10dp"
+      android:minHeight="160dp"
+      android:scrollbars="horizontal"
+      android:singleLine="false"
+      tools:text="@tools:sample/lorem"/>
+
+
+    <ImageButton
+      android:id="@+id/btn_your_recital"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_marginStart="8dp"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_corection"
+      app:layout_constraintEnd_toStartOf="@+id/btn_corection"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/btn_corection"
+      android:visibility="visible"
+      android:background="@drawable/button_background_pink"
+      android:src="@drawable/ic_play_arrow_white_24dp"
+      android:elevation="10dp"
+      android:contentDescription="@string/desc_image"
+      tools:targetApi="lollipop"/>
+
+    <TextView
+      android:id="@+id/tv_your_recital"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="@+id/tv_correction"
+      app:layout_constraintEnd_toEndOf="@+id/btn_your_recital"
+      app:layout_constraintStart_toStartOf="@+id/btn_your_recital"
+      app:layout_constraintTop_toTopOf="@+id/tv_correction"
+      android:fontFamily="sans-serif-condensed"
+      android:gravity="center_horizontal"
+      android:text="@string/title_your_recital"
+      android:textSize="12sp"
+      android:textStyle="normal"/>
+
+    <TextView
+      android:id="@+id/tv_correction"
+      android:textStyle="normal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="24dp"
+      android:fontFamily="sans-serif-condensed"
+      android:gravity="center_horizontal"
+      android:text="@string/title_correction"
+      android:textColor="#ffffff"
+      android:textSize="12sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@+id/btn_corection"
+      app:layout_constraintStart_toStartOf="@+id/btn_corection"
+      app:layout_constraintTop_toBottomOf="@+id/btn_corection"/>
+
+    <ImageButton
+      android:id="@+id/btn_corection"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="21dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/btn_your_recital"
+      app:layout_constraintTop_toBottomOf="@+id/tv_comment"
+      android:background="@drawable/button_background_correction"
+      android:contentDescription="@string/desc_image"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
+

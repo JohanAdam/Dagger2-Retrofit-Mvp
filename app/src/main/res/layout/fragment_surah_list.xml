@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main_layout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:focusableInTouchMode="true"
+  tools:context="surahlist.SurahListFragment">
+
+  <android.support.v7.widget.SearchView
+    android:id="@+id/search_view"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginStart="22dp"
+    android:layout_marginEnd="22dp"
+    android:background="@color/greyish_brown"
+    android:iconifiedByDefault="false"
+    app:defaultQueryHint="@string/hint_search_surah"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:queryBackground="@android:color/transparent"
+    app:queryHint="@string/hint_search_surah"/>
+
+  <!--GROUP ERROR-->
+  <android.support.constraint.Group
+    android:id="@+id/group_error"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    app:constraint_referenced_ids="img_error,tv_error_message,btn_refresh"/>
+
+  <io.reciteapp.recite.customview.CustomTextView
+    android:id="@+id/img_error"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="@+id/tv_error_message"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/search_view"
+    app:layout_constraintVertical_chainStyle="packed"
+    android:text="@string/icon_exclamation"
+    android:textColor="@color/md_red_300"
+    android:textSize="78sp"/>
+
+  <TextView
+    android:id="@+id/tv_error_message"
+    style="@style/ErrorLayoutMessage"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="22dp"
+    android:layout_marginEnd="22dp"
+    app:layout_constraintBottom_toTopOf="@+id/btn_refresh"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/img_error"
+    android:gravity="center"
+    android:text="@string/error_default"/>
+
+  <Button
+    android:id="@+id/btn_refresh"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_error_message"
+    android:background="@drawable/button_background_blue"
+    android:text="@string/action_refresh"/>
+  <!--END GROUP ERROR-->
+
+  <android.support.v7.widget.AppCompatImageView
+    android:id="@+id/img_loading"
+    android:layout_width="@dimen/loading_dimen"
+    android:layout_height="@dimen/loading_dimen"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/search_view"
+    app:srcCompat="@drawable/anim_loading"/>
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/recyclerView"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/search_view"
+    android:layout_below="@+id/search_view"
+    android:visibility="visible"/>
+
+  <!--START NO RESULT-->
+  <android.support.constraint.Group
+    android:id="@+id/group_no_result"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    app:constraint_referenced_ids="tv_no_result,img_no_result"/>
+
+  <io.reciteapp.recite.customview.CustomTextView
+    android:id="@+id/img_no_result"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toTopOf="@+id/tv_no_result"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/search_view"
+    app:layout_constraintVertical_chainStyle="packed"
+    android:text="@string/icon_search"
+    android:textColor="@color/greyish_brown"
+    android:textSize="78sp"/>
+
+  <TextView
+    android:id="@+id/tv_no_result"
+    style="@style/ErrorLayoutMessage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:text="@string/msg_no_search_result"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/img_no_result"/>
+  <!--END NO RESULT-->
+
+</android.support.constraint.ConstraintLayout>

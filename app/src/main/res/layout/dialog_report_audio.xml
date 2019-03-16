@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="@drawable/dialog_bg"
+  android:gravity="center_horizontal">
+
+  <TextView
+    android:id="@+id/title_dialog"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_centerHorizontal="true"
+    android:text="@string/hint_feedback"
+    android:textSize="20sp"
+    android:textColor="@color/white"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/comment_box_layout"
+    android:layout_width="match_parent"
+    android:layout_height="126dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_below="@+id/title_dialog"
+    app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/title_dialog">
+
+    <EditText
+      android:id="@+id/et_comment"
+      android:layout_width="257dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/dialog_title"
+      android:hint="@string/hint_feedback"
+      android:inputType="textMultiLine"
+      android:textColor="@color/white"
+      android:maxLines="7"
+      android:minLines="4"
+      android:gravity="left"/>
+
+  </android.support.design.widget.TextInputLayout>
+
+
+  <Button
+    android:id="@+id/btn_submit"
+    style="?android:attr/borderlessButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_marginEnd="16dp"
+    android:clipToPadding="false"
+    android:text="@string/action_submit"
+    android:textColor="@color/pinkTheme"
+    android:textSize="18sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#444440</color>
+  <color name="colorPrimaryDark">#465A65</color>
+
+  <color name="colorAccent">#6889ff</color>
+
+  <color name="pinkTheme">#ff5274</color>
+  <color name="pinkPressed">#66202e</color>
+
+  <color name="white">#ffffff</color>
+  <color name="transparent">#00ffffff</color>
+
+
+  <color name="pinkish_grey">#cfcfcf</color>
+  <color name="slate">#455a64</color>
+  <color name="greyish_brown">#4a4a4a</color>
+  <color name="wheat">#f8c777</color>
+  <color name="pale_olive_green">#b3dd89</color>
+  <color name="cornflower">#6889ff</color>
+  <color name="denim_blue">#3b5998</color>
+
+  <color name="disable_item_text">#616161</color>
+
+  <color name="font_9b">#9b9b9b</color>
+  <color name="font_a6">#a6a6a6</color>
+
+  <color name="color_button_background">#4a4a4a</color>
+  <color name="color_button_background_pressed">#2e2e2e</color>
+
+  <!--Drawer-->
+  <color name="material_drawer_background">#444440</color>
+  <!--MaterialDrawer DEFAULT text / items colors -->
+  <color name="material_drawer_primary_text">#ffffff</color>
+  <color name="material_drawer_primary_icon">#ffffff</color>
+  <color name="material_drawer_secondary_text">#ffffff</color>
+  <color name="material_drawer_hint_text">@color/md_blue_grey_400</color>
+  <color name="material_drawer_divider">@color/md_grey_600</color>
+  <!-- MaterialDrawer DEFAULT drawer colors -->
+  <color name="material_drawer_selected">@color/cornflower</color>
+  <color name="material_drawer_selected_text">#ffffff</color>
+  <color name="material_drawer_header_selection_text">#ffffff</color>
+
+  <color name="toggle_hover">@color/cornflower</color>
+  <color name="toggle_normal">@color/greyish_brown</color>
+  <color name="toggle_active">@color/denim_blue</color>
+  <color name="toggle_normal_off">@color/md_grey_700</color>
+
+</resources>

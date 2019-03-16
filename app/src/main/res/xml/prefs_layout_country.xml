@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <PreferenceCategory
+    android:layout="@layout/preferences_category"
+    android:key="first_category"
+    android:title="@string/language">
+
+    <ListPreference
+      android:defaultValue="en"
+      android:entries="@array/languages"
+      android:entryValues="@array/languagesValues"
+      android:key="language"
+      android:summary="%s"
+      android:title="@string/language"/>
+
+  </PreferenceCategory>
+
+  <PreferenceCategory
+    android:layout="@layout/preferences_category"
+    android:key="second_category"
+    android:title="@string/country">
+    <ListPreference
+      android:entries="@array/countries"
+      android:entryValues="@array/countryValues"
+      android:key="country"
+      android:summary="%s"
+      android:title="@string/country"/>
+  </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item android:id="@+id/menu_sort_new"
+    android:orderInCategory="1"
+    android:title="@string/title_newest"
+    app:showAsAction="collapseActionView"
+    android:icon="@drawable/ic_sort_24dp"/>
+
+  <item android:id="@+id/menu_sort_oldest"
+    android:orderInCategory="2"
+    android:title="@string/title_oldest"
+    app:showAsAction="collapseActionView"
+    android:icon="@drawable/ic_sort_24dp"/>
+
+</menu>

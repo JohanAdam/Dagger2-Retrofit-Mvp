@@ -1,0 +1,192 @@
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:fancy="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main_layout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:focusableInTouchMode="true"
+  tools:context="io.reciteapp.recite.submissionlist.user.SubmissionListFragment">
+
+  <android.support.v7.widget.SearchView
+    android:id="@+id/search_view"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginStart="22dp"
+    android:layout_marginEnd="22dp"
+    android:background="@color/greyish_brown"
+    android:iconifiedByDefault="false"
+    app:defaultQueryHint="@string/hint_search_surah"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:queryBackground="@android:color/transparent"
+    app:queryHint="@string/hint_search_surah"/>
+
+  <!--START EMPTY GROUP-->
+  <android.support.constraint.Group
+    android:id="@+id/group_empty"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    app:constraint_referenced_ids="tv_empty_icon, tv_empty_text"/>
+
+  <io.reciteapp.recite.customview.CustomTextView
+    android:id="@+id/tv_empty_icon"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_centerInParent="true"
+    android:text="@string/icon_cube"
+    android:textSize="58sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_empty_text"/>
+
+  <TextView
+    android:id="@+id/tv_empty_text"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_below="@+id/tv_empty_icon"
+    android:layout_centerHorizontal="true"
+    android:text="@string/msg_no_submission"
+    android:textAlignment="center"
+    android:textSize="18sp"
+    app:layout_constraintBottom_toTopOf="@+id/tv_empty_icon"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_empty_icon"
+    app:layout_constraintVertical_chainStyle="packed"/>
+  <!--END EMPTY GROUP-->
+
+  <!--START ERROR GROUP-->
+  <android.support.constraint.Group
+    android:id="@+id/group_error"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    app:constraint_referenced_ids="tv_error_icon, tv_error_text, btn_refresh"/>
+
+  <io.reciteapp.recite.customview.CustomTextView
+    android:id="@+id/tv_error_icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="@+id/tv_error_text"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/search_view"
+    app:layout_constraintVertical_chainStyle="packed"
+    android:text="@string/icon_exclamation"
+    android:textColor="@color/md_red_300"
+    android:textSize="78sp"/>
+
+  <TextView
+    android:id="@+id/tv_error_text"
+    style="@style/ErrorLayoutMessage"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="22dp"
+    android:layout_marginEnd="22dp"
+    app:layout_constraintBottom_toTopOf="@+id/btn_refresh"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_error_icon"
+    android:gravity="center"
+    android:text="@string/error_default"/>
+
+  <Button
+    android:id="@+id/btn_refresh"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_error_text"
+    android:background="@drawable/button_background_blue"
+    android:text="@string/action_refresh"/>
+  <!--END ERROR GROUP-->
+
+  <android.support.v7.widget.AppCompatImageView
+    android:id="@+id/loadingView"
+    android:layout_width="@dimen/loading_dimen"
+    android:layout_height="@dimen/loading_dimen"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_centerInParent="true"
+    tools:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/anim_loading"/>
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/submissionRecyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginTop="28dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/search_view"
+    tools:visibility="gone">
+  </android.support.v7.widget.RecyclerView>
+
+  <!--Result Layout Start-->
+  <android.support.constraint.Group
+    android:id="@+id/group_no_result"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    app:constraint_referenced_ids="tv_no_result,img_no_result"/>
+
+  <io.reciteapp.recite.customview.CustomTextView
+    android:id="@+id/img_no_result"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toTopOf="@+id/tv_no_result"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/search_view"
+    app:layout_constraintVertical_chainStyle="packed"
+    android:text="@string/icon_search"
+    android:textColor="@color/greyish_brown"
+    android:textSize="78sp"/>
+
+  <TextView
+    android:id="@+id/tv_no_result"
+    style="@style/ErrorLayoutMessage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="18dp"
+    android:text="@string/msg_no_search_result"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/img_no_result"/>
+  <!--Result Layout End-->
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+

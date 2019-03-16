@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main_layout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="io.reciteapp.recite.historylist.HistoryListFragment">
+
+  <!--Start Error Layout-->
+  <android.support.constraint.Group
+    android:id="@+id/group_error"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    app:constraint_referenced_ids="img_error,tv_error_message,btn_refresh"/>
+
+  <io.reciteapp.recite.customview.CustomTextView
+    android:id="@+id/img_error"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:text="@string/icon_exclamation"
+    android:textColor="@color/md_red_300"
+    android:textSize="78sp"
+    app:layout_constraintBottom_toTopOf="@+id/tv_error_message"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_chainStyle="packed"/>
+
+  <TextView
+    android:id="@+id/tv_error_message"
+    style="@style/ErrorLayoutMessage"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="22dp"
+    android:layout_marginEnd="22dp"
+    android:gravity="center"
+    android:text="@string/error_default"
+    app:layout_constraintBottom_toTopOf="@+id/btn_refresh"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/img_error"/>
+
+  <Button
+    android:id="@+id/btn_refresh"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_background_blue"
+    android:text="@string/action_refresh"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_error_message"/>
+  <!--End Error Layout-->
+
+
+  <android.support.v7.widget.AppCompatImageView
+    android:id="@+id/loadingView"
+    android:layout_width="@dimen/loading_dimen"
+    android:layout_height="@dimen/loading_dimen"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/anim_loading"/>
+
+  <!--Start Empty State-->
+  <android.support.constraint.Group
+    android:id="@+id/group_empty"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    app:constraint_referenced_ids="tv_empty_message"/>
+
+  <TextView
+    android:id="@+id/tv_empty_message"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="parent"
+    android:text="@string/msg_empty_history"
+    android:textAlignment="center"
+    android:textSize="18sp"
+    android:textStyle="italic"
+    style="@style/ErrorLayoutMessage"/>
+    <!--End Empty State-->
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

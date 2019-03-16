@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="icon_play" translatable="false">&#xf04b;</string>
+  <string name="icon_exclamation" translatable="false">&#xf12a;</string>
+  <string name="icon_error" translatable="false">&#xf06a;</string>
+  <string name="icon_search" translatable="false">&#xf002;</string>
+  <string name="icon_cube" translatable="false">&#xf1b2;</string>
+</resources>

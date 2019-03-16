@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main_content"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true"
+  tools:context=".quickstart.user.QuickStartActivity">
+
+  <android.support.v4.view.ViewPager
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:visibility="visible"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <View
+    android:id="@+id/view"
+    android:layout_width="match_parent"
+    android:layout_height="4dp"
+    android:layout_gravity="bottom"
+    app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:alpha="0.12"
+    android:background="@android:color/white"/>
+
+  <!-- divider -->
+
+  <FrameLayout
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_gravity="bottom"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <Button
+      android:id="@+id/intro_btn_skip"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start|center"
+      android:text="@string/action_skip"
+      android:textColor="@android:color/white"
+      style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:orientation="horizontal">
+
+      <ImageView
+        android:id="@+id/intro_indicator_0"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/indicator_unselected"/>
+
+      <ImageView
+        android:id="@+id/intro_indicator_1"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/indicator_unselected"/>
+
+      <ImageView
+        android:id="@+id/intro_indicator_2"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/indicator_unselected"/>
+
+      <ImageView
+        android:id="@+id/intro_indicator_3"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/indicator_unselected"/>
+
+      <ImageView
+        android:id="@+id/intro_indicator_4"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/indicator_unselected"/>
+
+    </LinearLayout>
+
+    <!-- This overlaps the next button in the last slide -->
+    <Button
+      android:id="@+id/intro_btn_finish"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end|center"
+      android:text="@string/action_finish"
+      android:textColor="@android:color/white"
+      android:visibility="gone"
+      style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <ImageButton
+      android:id="@+id/intro_btn_next"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end|center"
+      android:padding="16dp"
+      android:src="@drawable/ic_next"
+      android:tint="@android:color/white"
+      style="@style/Widget.AppCompat.Button.Borderless"/>
+
+  </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

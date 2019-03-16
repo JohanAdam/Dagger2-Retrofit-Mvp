@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:fancy="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main_layout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  tools:context="io.reciteapp.recite.submissiondetail.cs.SubmissionDetailCsFragment">
+
+  <Button
+    android:id="@+id/btn_report"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_alignParentTop="true"
+    android:padding="7dp"
+    android:background="@drawable/button_background_round"
+    android:drawableTop="@drawable/ic_report_problem"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <com.liulishuo.magicprogresswidget.MagicProgressCircle
+    android:id="@+id/progressBarPlayer"
+    android:layout_width="204dp"
+    android:layout_height="204dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_centerInParent="true"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:mpc_end_color="@color/cornflower"
+    app:mpc_start_color="@color/cornflower"
+    app:mpc_stroke_width="2dp"/>
+
+  <Chronometer
+    android:id="@+id/tv_chronometer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_centerHorizontal="true"
+    app:layout_constraintEnd_toEndOf="@+id/tv_SurahName"
+    app:layout_constraintStart_toStartOf="@+id/tv_SurahName"
+    app:layout_constraintTop_toBottomOf="@+id/tv_SurahName"
+    android:fontFamily="sans-serif-light"
+    android:gravity="center_horizontal"
+    android:textColor="@color/pinkish_grey"
+    android:textSize="18sp"
+    android:textStyle="normal"
+    tools:text="0 : 00"/>
+
+  <TextView
+    android:id="@+id/tv_SurahName"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_below="@+id/tv_chronometer"
+    android:layout_centerHorizontal="true"
+    app:layout_constraintEnd_toStartOf="@+id/btnForwards"
+    app:layout_constraintStart_toEndOf="@+id/btnBackwards"
+    app:layout_constraintTop_toBottomOf="@+id/progressBarPlayer"
+    android:gravity="center"
+    tools:text="Surah Name"
+    android:textSize="24sp"/>
+
+  <Button
+    android:id="@+id/btn_attach"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:layout_marginBottom="12dp"
+    android:layout_marginEnd="12dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:layout_alignParentBottom="true"
+    app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+    app:layout_constraintEnd_toStartOf="@+id/btn_delete"
+    android:text="@string/msg_attach_audio"
+    android:textColor="@color/white"
+    android:textSize="12sp"
+    android:visibility="gone"
+    android:background="@drawable/button_background_pink"/>
+
+  <ImageButton
+    android:id="@+id/btn_delete"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_marginBottom="12dp"
+    android:layout_alignBottom="@+id/btn_attach"
+    android:layout_alignParentBottom="true"
+    app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+    app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+    android:background="@drawable/button_background_blue"
+    android:padding="5dp"
+    android:src="@drawable/ic_delete"
+    android:scaleType="fitXY"
+    android:visibility="gone"
+    android:contentDescription="@string/desc_image"/>
+
+  <ImageButton
+    android:id="@+id/btnPlay"
+    android:layout_width="145dp"
+    android:layout_height="145dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toBottomOf="@+id/progressBarPlayer"
+    app:layout_constraintEnd_toEndOf="@+id/progressBarPlayer"
+    app:layout_constraintStart_toStartOf="@+id/progressBarPlayer"
+    app:layout_constraintTop_toTopOf="@+id/progressBarPlayer"
+    android:background="@drawable/button_background_round"
+    android:padding="50dp"
+    android:src="@drawable/ic_play"
+    android:scaleType="fitXY"
+    android:contentDescription="@string/desc_image"/>
+  
+  <com.liulishuo.magicprogresswidget.MagicProgressCircle
+    android:id="@+id/loader_buffer"
+    android:layout_width="158dp"
+    android:layout_height="158dp"
+    app:layout_constraintBottom_toBottomOf="@+id/btnPlay"
+    app:layout_constraintEnd_toEndOf="@+id/btnPlay"
+    app:layout_constraintStart_toStartOf="@+id/btnPlay"
+    app:layout_constraintTop_toTopOf="@+id/btnPlay"
+    app:mpc_default_color="@color/transparent"
+    app:mpc_end_color="@color/cornflower"
+    app:mpc_start_color="@color/cornflower"
+    app:mpc_stroke_width="3.5dp"/>
+
+  <ImageButton
+    android:id="@+id/btnBackwards"
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_alignParentStart="true"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/progressBarPlayer"
+    android:background="@drawable/button_background_round"
+    android:contentDescription="@string/desc_image"
+    android:src="@drawable/ic_fast_rewind"/>
+  
+  <ImageButton
+    android:id="@+id/btnForwards"
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_alignParentEnd="true"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/progressBarPlayer"
+    android:background="@drawable/button_background_round"
+    android:contentDescription="@string/desc_image"
+    android:src="@drawable/ic_fast_forward"/>
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/recyclerView"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_above="@+id/btn_attach"
+    android:layout_below="@+id/tv_SurahName"
+    android:layout_centerHorizontal="true"
+    app:layout_constraintBottom_toTopOf="@+id/btn_freeStyle"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_chronometer"
+    tools:listitem="@layout/list_item_cs_comment">
+
+  </android.support.v7.widget.RecyclerView>
+
+  <Button
+    android:id="@+id/btn_submit"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_alignParentBottom="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:background="@drawable/button_background_blue"
+    android:text="@string/action_submit"/>
+
+  <ImageButton
+    android:id="@+id/btn_freeStyle"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_marginBottom="12dp"
+    android:layout_alignParentBottom="true"
+    app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+    app:layout_constraintStart_toStartOf="@+id/recyclerView"
+    android:padding="5dp"
+    android:src="@drawable/ic_edit"
+    android:scaleType="fitXY"
+    android:background="@drawable/button_background_pink"
+    android:contentDescription="@string/desc_image"/>
+
+</android.support.constraint.ConstraintLayout>

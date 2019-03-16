@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".share.ShareFragment">
+
+  <android.support.v7.widget.AppCompatImageView
+    android:id="@+id/loadingView"
+    android:layout_width="@dimen/loading_dimen"
+    android:layout_height="@dimen/loading_dimen"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_centerInParent="true"
+    app:layout_constraintBottom_toTopOf="@+id/btn_share"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_share_header"
+    app:srcCompat="@drawable/anim_loading"/>
+
+  <TextView
+    android:id="@+id/tv_share_header"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp"
+    android:layout_marginStart="50dp"
+    android:layout_marginEnd="50dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:fontFamily="sans-serif-light"
+    android:gravity="center_horizontal"
+    android:textColor="@color/pinkish_grey"
+    android:textSize="18sp"
+    android:textStyle="normal"
+    android:text="@string/title_share_header"/>
+
+  <TextView
+    android:id="@+id/tv_ref_code"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toTopOf="@+id/btn_share"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_share_header"
+    android:fontFamily="sans-serif"
+    android:gravity="center_horizontal"
+    android:textColor="@color/white"
+    android:textSize="36sp"
+    tools:text="RL-A3X21"/>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/btn_share"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="14dp"
+    app:layout_constraintBottom_toTopOf="@+id/layout_info"
+    app:layout_constraintEnd_toStartOf="@+id/btn_copy"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintHorizontal_chainStyle="spread_inside"
+    app:layout_constraintStart_toStartOf="parent"
+    android:background="@drawable/button_background"
+    android:elevation="5dp"
+    tools:targetApi="lollipop">
+
+    <ImageView
+      android:id="@+id/iv_share"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="19dp"
+      android:layout_marginBottom="16dp"
+      app:layout_constraintBottom_toTopOf="@+id/tv_share_title"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_chainStyle="packed"
+      android:elevation="5dp"
+      android:src="@drawable/ic_share_big"
+      tools:targetApi="lollipop"
+      android:contentDescription="@string/desc_image"/>
+
+    <TextView
+      android:id="@+id/tv_share_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="4dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintBottom_toTopOf="@+id/tv_share_sub"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:text="@string/title_share"
+      android:textAllCaps="true"
+      style="@style/ButtonText"/>
+
+    <TextView
+      android:id="@+id/tv_share_sub"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:text="@string/msg_share_through_apps"
+      style="@style/ButtonSubtext"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/btn_copy"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="14dp"
+    android:layout_marginEnd="16dp"
+    app:layout_constraintBottom_toBottomOf="@+id/btn_share"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/btn_share"
+    app:layout_constraintTop_toTopOf="@+id/btn_share"
+    android:background="@drawable/button_background"
+    android:elevation="5dp"
+    tools:targetApi="lollipop">
+
+    <ImageView
+      android:id="@+id/iv_copy"
+      android:layout_width="42dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="19dp"
+      android:layout_marginBottom="16dp"
+      app:layout_constraintBottom_toTopOf="@+id/tv_copy_title"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_chainStyle="packed"
+      android:elevation="5dp"
+      android:src="@drawable/ic_copy"
+      android:contentDescription="@string/desc_image"
+      tools:targetApi="lollipop"/>
+
+    <TextView
+      android:id="@+id/tv_copy_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="4dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintBottom_toTopOf="@+id/tv_copy_sub"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:text="@string/title_copy"
+      android:textAllCaps="true"
+      style="@style/ButtonText"/>
+
+    <TextView
+      android:id="@+id/tv_copy_sub"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:text="@string/msg_copy_clipboard"
+      style="@style/ButtonSubtext"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/layout_info"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="19dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/dialog_bg"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:elevation="2dp"
+    android:clickable="false"
+    tools:targetApi="lollipop">
+
+    <ImageView
+      android:id="@+id/tv_image_disclaimer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:src="@drawable/ic_warning"
+      android:contentDescription="@string/desc_image"/>
+
+    <TextView
+      android:id="@+id/tv_share_description"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="8dp"
+      android:layout_marginStart="15dp"
+      android:layout_marginEnd="15dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_image_disclaimer"
+      android:fontFamily="sans-serif-condensed-light"
+      android:lineSpacingExtra="7sp"
+      android:maxLines="2"
+      android:text="@string/msg_share_description"
+      android:textColor="@color/white"
+      android:textSize="12sp"
+      android:textStyle="normal"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+  <android.support.constraint.Group
+    android:id="@+id/group_all"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    app:constraint_referenced_ids="btn_copy, btn_share, tv_ref_code"/>
+
+  <!--GROUP ERROR-->
+  <android.support.constraint.Group
+    android:id="@+id/group_error"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    app:constraint_referenced_ids="img_error,tv_error_message,btn_refresh"/>
+
+  <io.reciteapp.recite.customview.CustomTextView
+    android:id="@+id/img_error"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    app:layout_constraintBottom_toTopOf="@+id/tv_error_message"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_share_header"
+    app:layout_constraintVertical_chainStyle="packed"
+    android:text="@string/icon_exclamation"
+    android:textColor="@color/md_red_300"
+    android:textSize="78sp"/>
+
+  <TextView
+    android:id="@+id/tv_error_message"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="22dp"
+    android:layout_marginEnd="22dp"
+    app:layout_constraintBottom_toTopOf="@+id/btn_refresh"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/img_error"
+    android:gravity="center"
+    android:text="@string/error_default"
+    style="@style/ErrorLayoutMessage"/>
+
+  <Button
+    android:id="@+id/btn_refresh"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:layout_constraintBottom_toTopOf="@+id/layout_info"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_error_message"
+    android:background="@drawable/button_background_blue"
+    android:text="@string/action_refresh"/>
+  <!--END GROUP ERROR-->
+
+</android.support.constraint.ConstraintLayout>

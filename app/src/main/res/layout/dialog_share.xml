@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="300dp"
+  android:layout_height="wrap_content"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:background="@drawable/dialog_bg"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/tv_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_centerHorizontal="true"
+    android:fontFamily="sans-serif"
+    android:gravity="center_horizontal"
+    android:text="@string/title_get_recitetime"
+    android:textStyle="bold"
+    android:textSize="19sp"
+    android:textColor="@color/white"/>
+
+  <TextView
+    android:id="@+id/tv_desc"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_title"
+    android:layout_marginTop="36dp"
+    android:layout_marginBottom="36dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:fontFamily="sans-serif"
+    android:lineSpacingExtra="6sp"
+    android:gravity="center_horizontal"
+    android:text="@string/msg_get_recite"
+    android:textStyle="normal"
+    android:textSize="12sp"
+    android:textColor="@color/white"/>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/btn_share"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_below="@+id/tv_desc"
+    android:layout_centerHorizontal="true"
+    android:padding="10dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/background_lines_pink">
+
+    <ImageView
+      android:id="@+id/icon_share"
+      android:layout_width="25dp"
+      android:layout_height="25dp"
+      android:src="@drawable/ic_share_big"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+      android:textStyle="normal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:fontFamily="sans-serif"
+      android:gravity="end"
+      android:text="@string/action_share_now"
+      android:textAllCaps="true"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="@+id/icon_share"
+      app:layout_constraintStart_toEndOf="@+id/icon_share"
+      app:layout_constraintTop_toTopOf="@+id/icon_share"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
+

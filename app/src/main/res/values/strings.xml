@@ -1,0 +1,215 @@
+<resources>
+  <string name="app_name">Recite</string>
+  <string name="msg_loading">Loading</string>
+  <string name="action_okay">Okay</string>
+  <string name="error_authentication">Authentication error</string>
+  <string name="title_rec" translatable="false">rec</string>
+  <string name="title_ite" translatable="false">ite</string>
+  <string name="title_sign_in_with_facebook">Sign In With Facebook</string>
+  <string name="title_sign_in_with_google">Sign In With Google</string>
+  <string name="error_default">Oops,there is something wrong with connection to server</string>
+  <string name="error_login">An error has occurred while login</string>
+  <string name="home">Home</string>
+  <string name="verse_id">Verse Id</string>
+  <string name="menu_progress">History</string>
+  <string name="title_referral">Referral</string>
+  <string name="title_redemption">Redemption</string>
+  <string name="title_reload">Reload</string>
+  <string name="title_reviewer_test">Reviewer Test</string>
+  <string name="title_settings">Settings</string>
+  <string name="title_quick_start">Quick Start</string>
+  <string name="title_about">About</string>
+  <string name="title_login">Login</string>
+  <string name="title_logout">Logout</string>
+  <string name="title_reciteTime">ReciteTime</string>
+  <string name="title_recital_stats">Recital Stats</string>
+  <string name="title_last_sent">Last Sent</string>
+  <string name="msg_seconds">seconds</string>
+  <string name="msg_minutes">minutes</string>
+  <string name="msg_hours">hours</string>
+  <string name="msg_days">days</string>
+  <string name="title_total">Total</string>
+  <string name="msg_recitals">recitals</string>
+  <string name="title_validate">Validate</string>
+  <string name="msg_validate">Submit Recital for Review</string>
+  <string name="title_listen">Listen</string>
+  <string name="msg_listen">Community Submissions</string>
+  <string name="dummy_time" translatable="false">00:00:00</string>
+  <string name="dummy_0" translatable="false">0</string>
+
+  <string name="msg_address">Address</string>
+  <string name="msg_nationality">Nationality</string>
+  <string name="msg_contact_number">Contact Number</string>
+  <string name="msg_email">Email</string>
+  <string name="msg_lastName">Last Name</string>
+  <string name="msg_firstName">First Name</string>
+  <string name="title_register">Register</string>
+  <string name="title_male">Male</string>
+  <string name="title_female">Female</string>
+  <string name="msg_please_insert_valid_name">Please insert a valid name</string>
+  <string name="msg_please_insert_valid_email">Please insert valid email</string>
+  <string name="msg_please_insert_valid_number">Please insert valid contact number</string>
+  <string name="msg_please_insert_valid_nationality">Please insert valid nationality</string>
+  <string name="msg_please_insert_valid_address">Please insert valid address</string>
+  <string name="msg_please_choose_gender">Please select gender</string>
+  <string name="msg_please_enter_complete_details">Please complete all details</string>
+  <string name="msg_quota_reach">Our reviewers are at maximum capacity. Please wait a moment and try again.</string>
+  <string name="error_interal_server">Failed to send request to server</string>
+  <string name="msg_required_payment">Kindly pay the fees of RM60 (RM50/Hour ReciteTime + RM10 for first time registration)</string>
+  <string name="title_update_email">Please update your email :</string>
+  <string name="action_submit">Submit</string>
+  <string name="error_email_not_valid">Email not valid</string>
+  <string name="msg_powered_by">Powered by</string>
+  <string name="action_cancel">Cancel</string>
+  <string name="msg_free_credit_general">ReciteTime has been credited.</string>
+  <string name="title_activity_dialog_ad" translatable="false">DialogAdActivity</string>
+  <string name="title_sorry">We’re sorry!</string>
+  <string name="msg_enter_code">Enter Code</string>
+  <string name="error_no_connection">No internet connection</string>
+  <string name="title_enroll">Enroll</string>
+  <string name="msg_enroll">Do you want to enroll to this program?</string>
+  <string name="hint_referral_code">Referral Code</string>
+  <string name="hint_redemption_code">Redemption Code</string>
+  <string name="error_code_used">This code has been used</string>
+  <string name="error_code_expired">The code is expired</string>
+  <string name="error_code_account_already_has_referral_code">Referral code have been use in this account.</string>
+  <string name="error_not_found_code">Code not found</string>
+  <string name="hint_search_surah">Search surah</string>
+  <string name="action_refresh">Refresh</string>
+  <string name="msg_no_search_result">Result not found</string>
+  <string name="title_submission">Submission</string>
+  <string name="desc_image" translatable="false">Image</string>
+  <string name="msg_view_all">View all</string>
+  <string name="title_previous_submission">Previous Submissions</string>
+  <string name="msg_empty_history">- You haven’t submitted this verse -</string>
+  <string name="error_create_folder">Failed to make temporary folder. If using Android 6.0 above please make sure to enable storage permission.</string>
+  <string name="title_update_app">New Update!</string>
+  <string name="msg_update_app">There is new update available.</string>
+  <string name="msg_reviewed">Reviewed</string>
+  <string name="msg_unreviewed">Unreviewed</string>
+  <string name="error_check_recite_time">Having problem to check remaining time, please check your internet connection.</string>
+  <string name="error_audio_silence">Voice not detected, please try again.</string>
+  <string name="error_recite_time_unsufficient">Insufficient credit available.</string>
+  <string name="title_confirmation_submittion">Confirmation</string>
+  <string name="msg_confirmation_submittion">Confirm to submit?</string>
+  <string name="msg_audio_submission_success">Audio successfully submitted.</string>
+  <string name="dummy_00_00" translatable="false">00:00</string>
+  <string name="title_reviewer">Reviewer</string>
+  <string name="msg_no_comment">No comment</string>
+  <string name="msg_pass">Pass</string>
+  <string name="msg_fail">Fail</string>
+  <string name="title_credible_source">Credible Source</string>
+  <string name="msg_voice_note_template">Tap the Correction button</string>
+  <string name="action_rating_has_been_sent">Rating has been sent.</string>
+  <string name="action_give_rating_cs">Credible Source Rating</string>
+  <string name="title_dialog_rating_cs">Reviewer Rating</string>
+  <string name="hint_feedback">Feedback</string>
+  <string name="title_your_recital">Your Recital</string>
+  <string name="title_correction">Correction</string>
+  <string name="error_stream_audio_general">Having problem to stream audio, please check you internet connection.</string>
+  <string name="title_certification">Certification</string>
+  <string name="title_affiliation">Affiliation</string>
+  <string name="title_response_time">Response Time</string>
+  <string name="title_rating">Rating</string>
+  <string name="title_reviews">Reviews</string>
+  <string name="msg_empty_history_all">No history</string>
+  <string name="msg_no_submission">No Submission</string>
+  <string name="msg_next_submission">Next Submission</string>
+  <string name="title_lock">Locked</string>
+  <string name="title_newest">Newest</string>
+  <string name="title_oldest">Oldest</string>
+  <string name="title_all">All</string>
+  <string name="msg_attach_audio">Attach Audio</string>
+  <string name="msg_comment_here">Comment Here</string>
+  <string name="error_credit_not_available">Credit not available.</string>
+  <string name="error_please_insert_comment">Please insert comment.</string>
+  <string name="title_user_recital">User Recital</string>
+  <string name="msg_feedback_success">Thank you for your feedback.</string>
+  <string name="msg_reload_package_unavailable">Package not available.</string>
+  <string name="msg_phone_number_example_in">Number Phone (Ex: 08##########)</string>
+  <string name="title_provider_xl">XL</string>
+  <string name="title_provider_telkomsel">Telkomsel</string>
+  <string name="error_insert_number">Please enter your number.</string>
+  <string name="msg_success_reload">Terima kasih. Untuk melanjutkan pembelian, silakan cek SMS pada handphone Anda %1$s dan ikuti petunjuk selanjutnya.</string>
+
+
+  <string name="facebook_app_id" translatable="false">176356313075177</string>
+  <string name="title_link_account">Link Account</string>
+  <string name="msg_exist_email_linking">We\'ve detected your email previously log in Recite by %1$s. Please use that to log in or we can link the account for you.</string>
+  <string name="title_google" translatable="false">Google</string>
+  <string name="title_facebook" translatable="false">Facebook</string>
+  <string name="default_notification_channel_id" translatable="false">Recite Notification</string>
+  <string name="notification_title_new_submission">New Submission</string>
+  <string name="notification_title_new_rating">New Rating</string>
+  <string name="notification_title_new_review">New Review</string>
+  <string name="notification_title_reload_success">Reload Successful</string>
+  <string name="notification_message_referral_time">You earned %2$d %1$s of ReciteTime.</string>
+  <string name="msg_referral_time_desc">A user has redeemed your referral code and you earned %2$d %1$s ReciteTime. Get more ReciteTime by sharing Recite with people.</string>
+  <string name="title_congratulations">Congratulations</string>
+  <string name="title_get_recitetime">Get ReciteTime</string>
+  <string name="msg_get_recite">Share Recite with others and earn free ReciteTime for every sign-ups.</string>
+  <string name="action_share_now">Share Now!</string>
+
+  <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+  <string name="title_share_header">Get ReciteTime by sharing Recite with your friends</string>
+  <string name="title_share">Share</string>
+  <string name="msg_share_through_apps">Through Apps</string>
+  <string name="title_copy">Copy</string>
+  <string name="msg_copy_clipboard">Your code to clipboard</string>
+  <string name="msg_share_description">ReciteTime will be awarded upon successful registrations using your code</string>
+  <string name="msg_share_recite_template">Use my referral code %1$s to get bonus ReciteTime on your first purchase! Download Recite now and validate your recitals.</string>
+  <string name="msg_copy_successfully">Code successfully copied.</string>
+  <string name="title_sort">Sort</string>
+  <string name="language">Language</string>
+  <string name="country">Country</string>
+  <string name="msg_tap_identify_verse">Tap to identify verse</string>
+  <string name="msg_hint_better_accuracy_recitetime">For better accuracy, please allow longer record time</string>
+  <string name="msg_verse_id_disclaimer">VerseID is an experimental feature. It is constantly under development. Verse recognition accuracy MAY NOT BE satisfactory in some cases.</string>
+  <string name="action_listening">Listening</string>
+  <string name="action_stop_listening">Stop Listening</string>
+  <string name="msg_analyzing">Analyzing</string>
+  <string name="msg_result_empty">Result empty</string>
+  <string name="error_audio_locked">Submission locked by other Credible Source.</string>
+  <string name="action_skip">Skip</string>
+  <string name="action_finish">Finish</string>
+  <string name="msg_track_progress">Track your progress</string>
+  <string name="msg_choose_recording">Choose Surah for recording</string>
+  <string name="msg_record_submit">Record and submit recitals</string>
+  <string name="msg_listen_recital_other">Listen to recital from others</string>
+  <string name="msg_choose_country">Choose Your Country</string>
+  <string name="action_malaysia">Malaysia</string>
+  <string name="action_indonesia">Indonesia</string>
+  <string name="msg_onboard_dashboard">Anda boleh memulakan semakan dengan memilih butang \"Start Reviewing\"</string>
+  <string name="msg_onboard_submission_list">Audio yang dihantar akan terpapar disini dan telah disusun mengikut masa dihantar. Utamakan semakan pada ruang \"Oldest\"</string>
+  <string name="msg_onboard_start_reviewing">Tekan symbol \"Play\" untuk memulakan menyemak bacaan.</string>
+  <string name="msg_onboard_reviewing_pause">Tekan butang \"Pause\" apabila anda mendapati ada pembetulan di bacaan penguna.</string>
+  <string name="msg_onboard_dialog_comment">Dialog pembetulan akan terpapar untuk anda menegur bacaan penguna samaada dalam bentuk tulisan atau audio.</string>
+  <string name="msg_onboard_submit_review">Setelah anda berpuas hati dengan semakan anda, tekan butang \"Submit\" (hantar) berwarna biru.</string>
+  <string name="msg_onboard_success_review">Anda telah Berjaya membuat semakan audio bacaan pengguna yang pertama.</string>
+  <string name="title_tajweed_validation_app">Tajweed Validation App</string>
+  <string name="msg_terms_policy">By signing in, you agree to our Terms n Privacy Policy</string>
+  <string name="error_please_enter_code">Please insert code before submit</string>
+
+  <string-array name="languages">
+    <item name="english">English</item>
+    <item name="malay">Malay</item>
+    <item name="indonesia">Indonesia</item>
+  </string-array>
+
+  <string-array name="languagesValues">
+    <item name="english">en</item>
+    <item name="malay">ms</item>
+    <item name="indonesia">in</item>
+  </string-array>
+
+  <string-array name="countries">
+    <item name="malaysia">Malaysia</item>
+    <item name="indonesia">Indonesia</item>
+  </string-array>
+
+  <string-array name="countryValues">
+    <item name="malaysia">my</item>
+    <item name="indonesia">in</item>
+  </string-array>
+
+</resources>

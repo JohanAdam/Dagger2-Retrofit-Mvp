@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingTop="20dp"
+  android:paddingStart="20dp"
+  android:paddingEnd="20dp"
+  android:paddingBottom="10dp"
+  android:animateLayoutChanges="true"
+  android:background="@drawable/dialog_bg">
+
+  <TextView
+    android:id="@+id/dialog_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_centerHorizontal="true"
+    android:textAllCaps="true"
+    android:text="@string/title_reload"
+    android:textColor="@color/white"
+    style="@style/TextAppearance.AppCompat.Title"/>
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/til_phone_number"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/dialog_title"
+    android:layout_marginTop="18dp"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center_horizontal"
+    android:textColorHint="@color/cornflower">
+
+    <EditText
+      android:id="@+id/et_phone_number"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="15dp"
+      android:hint="@string/msg_phone_number_example_in"
+      android:inputType="phone"
+      android:singleLine="true"
+      android:textColor="@color/white"
+      tools:targetApi="lollipop"/>
+
+  </android.support.design.widget.TextInputLayout>
+
+  <RadioGroup
+    android:id="@+id/groupRadio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_below="@id/til_phone_number"
+    android:orientation="horizontal">
+
+    <RadioButton
+      android:id="@+id/radio_xl"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_margin="10dp"
+      style="@style/ToggleButton"
+      android:text="@string/title_provider_xl"
+      android:textAlignment="center"/>
+
+    <RadioButton
+      android:id="@+id/radio_telkomse"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      style="@style/ToggleButton"
+      android:layout_margin="10dp"
+      android:text="@string/title_provider_telkomsel"
+      android:textAlignment="center"/>
+
+  </RadioGroup>
+
+  <Button
+    android:id="@+id/btn_ok"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="16dp"
+    android:layout_below="@+id/groupRadio"
+    android:text="@string/action_submit"
+    android:textColor="@android:color/white"
+    style="?android:attr/borderlessButtonStyle"/>
+
+</RelativeLayout>

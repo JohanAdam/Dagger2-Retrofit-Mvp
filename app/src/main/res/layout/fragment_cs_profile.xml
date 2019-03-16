@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="io.reciteapp.recite.csprofile.CsProfileFragment">
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/top_layout"
+    android:layout_width="match_parent"
+    android:layout_height="152dp"
+    android:background="@color/cornflower">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/avatarView"
+      android:layout_width="75dp"
+      android:layout_height="75dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:src="@drawable/ic_account_circle_black_24dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+      android:id="@+id/name_cs"
+      android:textStyle="normal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:fontFamily="sans-serif"
+      android:gravity="center_horizontal"
+      android:textColor="#ffffff"
+      android:textSize="18sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/avatarView"
+      tools:text="Shafuan As Sidik"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+  <android.support.v4.widget.NestedScrollView
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/top_layout">
+
+    <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/progressBar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/anim_loading"/>
+
+      <TextView
+        android:id="@+id/tv_reviews_count"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_rating_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="28"/>
+
+      <TextView
+        android:id="@+id/tv_reviews_title"
+        android:textStyle="normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text="@string/title_reviews"
+        android:textColor="#a6a6a6"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_reviews_count"
+        app:layout_constraintStart_toStartOf="@+id/tv_reviews_count"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reviews_count"/>
+
+      <TextView
+        android:id="@+id/tv_rating_count"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_response_time"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_reviews_count"
+        app:layout_constraintTop_toTopOf="@+id/tv_reviews_count"
+        tools:text="4.6"/>
+
+      <TextView
+        android:id="@+id/tv_rating_title"
+        android:textStyle="normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text="@string/title_rating"
+        android:textColor="#a6a6a6"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_rating_count"
+        app:layout_constraintStart_toStartOf="@+id/tv_rating_count"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rating_count"/>
+
+      <TextView
+        android:id="@+id/tv_response_time"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_rating_count"
+        app:layout_constraintTop_toTopOf="@+id/tv_rating_count"
+        tools:text="7m"/>
+
+      <TextView
+        android:id="@+id/tv_response_time_title"
+        android:textStyle="normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text="@string/title_response_time"
+        android:textColor="#a6a6a6"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_response_time"
+        app:layout_constraintStart_toStartOf="@+id/tv_response_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_response_time"/>
+
+      <TextView
+        android:id="@+id/affiliation_title_tv"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="47dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/title_affiliation"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reviews_title"/>
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/affliation_data_tv"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/affiliation_title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/affiliation_title_tv"/>
+
+      <TextView
+        android:id="@+id/certification_title_tv"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/title_certification"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/affiliation_title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/affliation_data_tv"/>
+
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/certification_data_rv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@+id/affliation_data_tv"
+        android:layout_toEndOf="@+id/certification_title_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_response_time_title"
+        app:layout_constraintStart_toStartOf="@+id/certification_title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/certification_title_tv"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+  </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

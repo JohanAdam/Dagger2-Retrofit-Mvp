@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <TextView
+    android:id="@+id/title_rec"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp"
+    android:layout_marginStart="8dp"
+    android:text="@string/title_rec"
+    android:textAllCaps="true"
+    android:textColor="@color/pinkTheme"
+    android:textSize="52sp"
+    app:layout_constraintEnd_toStartOf="@+id/title_ite"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/tv_tajweed_validation_app"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:fontFamily="sans-serif"
+    android:gravity="center_horizontal"
+    android:text="@string/title_tajweed_validation_app"
+    android:textColor="@color/pinkish_grey"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/title_rec"/>
+
+  <TextView
+    android:id="@+id/title_ite"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:text="@string/title_ite"
+    android:textAllCaps="true"
+    android:textColor="@color/cornflower"
+    android:textSize="52sp"
+    app:layout_constraintBottom_toBottomOf="@+id/title_rec"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/title_rec"
+    app:layout_constraintTop_toTopOf="@+id/title_rec"/>
+
+  <ImageView
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="235dp"
+    android:background="@drawable/background_login"
+    android:contentDescription="@string/desc_image"
+    android:scaleType="centerCrop"/>
+
+  <Button
+    android:id="@+id/btn_sign_in_google"
+    android:textStyle="normal"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:background="@drawable/button_background"
+    android:drawablePadding="12dp"
+    android:drawableStart="@drawable/google_logo"
+    android:fontFamily="sans-serif"
+    android:text="@string/title_sign_in_with_google"
+    android:textAllCaps="false"
+    android:textSize="14sp"
+    app:layout_constraintBottom_toTopOf="@+id/guideline4"
+    app:layout_constraintEnd_toEndOf="@+id/btn_sign_in_facebook"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="@+id/btn_sign_in_facebook"
+    app:layout_constraintTop_toBottomOf="@+id/btn_sign_in_facebook"/>
+
+  <Button
+    android:id="@+id/btn_sign_in_facebook"
+    android:textStyle="normal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:background="@drawable/button_background"
+    android:drawablePadding="12dp"
+    android:drawableStart="@drawable/facebook_logo"
+    android:fontFamily="sans-serif"
+    android:text="@string/title_sign_in_with_facebook"
+    android:textAllCaps="false"
+    android:textSize="14sp"
+    app:layout_constraintBottom_toTopOf="@+id/btn_sign_in_google"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/background"
+    app:layout_constraintVertical_chainStyle="packed"/>
+
+
+  <android.support.constraint.Guideline
+    android:id="@+id/guideline4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_end="48dp"/>
+
+  <TextView
+    android:id="@+id/tv_terms_condition"
+    android:textStyle="normal"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:fontFamily="sans-serif-light"
+    android:gravity="center_horizontal"
+    android:minLines="2"
+    android:text="@string/msg_terms_policy"
+    android:textColor="@color/font_a6"
+    android:textSize="12sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline4"/>
+
+</android.support.constraint.ConstraintLayout>

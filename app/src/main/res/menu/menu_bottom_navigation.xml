@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+    android:id="@+id/action_home"
+    android:enabled="true"
+    android:icon="@drawable/ic_house"
+    android:title="@string/home"
+    app:showAsAction="ifRoom"/>
+  <item
+    android:id="@+id/action_verseid"
+    android:enabled="true"
+    android:icon="@drawable/ic_verse_id"
+    android:title="@string/verse_id"
+    app:showAsAction="ifRoom"/>
+  <item
+    android:id="@+id/action_progress"
+    android:enabled="true"
+    android:icon="@drawable/ic_book"
+    android:title="@string/menu_progress"
+    app:showAsAction="ifRoom"/>
+  <!--<item-->
+  <!--android:id="@+id/action_courses"-->
+  <!--android:enabled="false"-->
+  <!--android:icon="@drawable/diploma_4"-->
+  <!--android:title="@string/courses"-->
+  <!--app:showAsAction="ifRoom"/>-->
+</menu>

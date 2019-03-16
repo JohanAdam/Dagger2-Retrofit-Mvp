@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_margin="10dp"
+  android:animateLayoutChanges="true"
+  android:paddingTop="10dp"
+  android:paddingBottom="10dp"
+  android:paddingStart="10dp"
+  android:paddingEnd="10dp"
+  android:background="@drawable/dialog_bg"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  android:gravity="center_horizontal">
+
+  <TextView
+    android:id="@+id/tv_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_centerHorizontal="true"
+    android:text="@string/title_dialog_rating_cs"
+    android:textColor="@color/white"
+    android:textSize="24sp"
+    android:fontFamily="sans-serif"
+    android:textStyle="bold"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/tv_text_seekbar"
+    android:textStyle="normal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="21dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:fontFamily="sans-serif"
+    android:gravity="center_horizontal"
+    android:textColor="#ffffff"
+    android:textSize="48sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+    tools:text="0"/>
+
+  <SeekBar
+    android:id="@+id/seekbar_rating"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:max="4"
+    android:theme="@style/Widget.AppCompat.SeekBar.Discrete"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_text_seekbar"/>
+
+  <EditText
+    android:id="@+id/et_feedback"
+    android:textStyle="italic"
+    android:layout_width="257dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="18dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/seekbar_rating"
+    android:gravity="top"
+    android:hint="@string/hint_feedback"
+    android:minLines="3"
+    android:maxLines="3"
+    android:scrollbars="vertical"
+    android:inputType="textMultiLine"
+    android:textColor="@color/white"
+    android:theme="@style/EditTextStyle"/>
+
+  <Button
+    android:id="@+id/btn_submit"
+    style="?android:attr/borderlessButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:text="@string/action_submit"
+    android:textColor="@color/pinkTheme"
+    android:textSize="18sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/et_feedback"/>
+
+
+</android.support.constraint.ConstraintLayout>
